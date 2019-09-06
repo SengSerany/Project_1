@@ -1,0 +1,25 @@
+<h1>Ajoût d'un contenu</h1>
+
+<%= form_for @content do |f| %>
+
+  <div class="field">
+    <%= f.label :link, "Lien Youtube" %><br />
+    <%= f.text_field :link, placeholder: "www.youtube.com/CMDLF455DDLD..." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title, "Titre" %><br />
+    <%= f.email_field :title, placeholder: "Mettez un titre significatif au contenu" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from, "Tiré de" %><br />
+    <%= f.email_field :from, placeholder: "Nom de la sére / film / anime de l’extrait" %>
+  </div>
+<br/>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= link_to "Home", root_path %>
